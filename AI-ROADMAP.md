@@ -54,6 +54,33 @@
 
 ---
 
+## ✅ v0.2.0-beta Completata
+
+### Utility AI System (Novembre 2025)
+
+#### Core Components
+- ✅ **Scorer** - Interface funzionale per valutazione behaviors
+- ✅ **Consideration** - Valutatore singola variabile con normalizzazione
+- ✅ **ResponseCurve** - 13+ curve predefinite + custom
+- ✅ **UtilitySelector** - Nodo che sceglie behavior migliore
+- ✅ **DynamicPrioritySelector** - Priorità dinamiche runtime
+
+#### Features Avanzate
+- ✅ Combinatori per Scorer (add, multiply, scale, etc.)
+- ✅ Curve combinabili e componibili
+- ✅ Builder pattern per configurazione facile
+- ✅ Debug support con score tracking
+- ✅ Re-evaluation configurabile
+
+#### Statistiche v0.2.0-beta
+- 📦 **29 classi Java** totali (+5)
+- 🎯 **11 nodi behavior tree** disponibili (+2)
+- 🧮 **13+ response curves** predefinite
+- 📚 **3 esempi completi** (Combat, Resource, Tasks)
+- ⚡ **Ottimizzazioni** per decision-making efficiente
+
+---
+
 ## 🚀 Implementazioni Pianificate
 
 ### Phase 1: Nodi Avanzati + Sensori ✅ COMPLETATO AL 100%
@@ -124,27 +151,44 @@
 
 ---
 
-### Phase 2: Utility AI System
+### Phase 2: Utility AI System ✅ COMPLETATO
 **Priorità**: MEDIA  
-**Tempo Stimato**: 40-50 minuti  
-**Versione Target**: v0.2.0
+**Completato**: 2025-11-09  
+**Versione**: v0.2.0
 
 #### Core Utility System
-- [ ] **Scorer Interface** - Sistema di punteggio per behaviors
-- [ ] **Consideration** - Valutazione singola variabile
-- [ ] **ResponseCurve** - Curve di valutazione
-  - Linear
-  - Quadratic
-  - Exponential
-  - Custom curves
+- [x] **Scorer Interface** - Sistema di punteggio per behaviors
+  - Combinatori (add, multiply, scale, clamp, invert)
+  - Scorer costanti e funzionali
   
-- [ ] **UtilitySelector** - Seleziona behavior con score più alto
-- [ ] **DynamicPriority** - Priorità che cambiano runtime
+- [x] **Consideration** - Valutazione singola variabile
+  - Normalizzazione automatica input
+  - Builder pattern per configurazione
+  - Integrazione con ResponseCurve
+  
+- [x] **ResponseCurve** - Curve di valutazione
+  - Linear, Quadratic, Cubic
+  - Exponential con slope configurabile
+  - Logistic (S-curve) con steepness
+  - Step, SmoothStep, Power, Sine
+  - Combinatori (invert, scale, offset, clamp, chain)
+  
+- [x] **UtilitySelector** - Seleziona behavior con score più alto
+  - Re-evaluation interval configurabile
+  - Cambio dinamico behavior
+  - Debug con score tracking
+  
+- [x] **DynamicPrioritySelector** - Priorità che cambiano runtime
+  - Riordino automatico children
+  - Integrazione con Scorer
+  - Priority tracking per debug
 
-#### Esempi
-- [ ] Combat AI con utility scoring
-- [ ] Resource gathering AI
-- [ ] Social interaction AI
+#### Esempi Completi
+- [x] Combat AI con utility scoring (attack/flee/cover)
+- [x] Resource gathering AI con inventory tracking
+- [x] Task Manager AI con dynamic priorities
+- [x] Guida completa curve di risposta
+- [x] Best practices e performance tips
 
 ---
 
@@ -367,8 +411,12 @@ Questo è un progetto in evoluzione. Idee e suggerimenti sono benvenuti!
 - ✅ Sistema Percezione (6/6) - Tutti i sensori implementati
 - ✅ Documentazione Completa
 
-#### v0.2.0 (Utility AI) - 0% 
-- ⏳ In pianificazione
+#### v0.2.0 (Utility AI) ✅ 100% COMPLETATO
+- ✅ Scorer Interface (5/5)
+- ✅ Consideration & ResponseCurve (13+ curves)
+- ✅ UtilitySelector (1/1)
+- ✅ DynamicPrioritySelector (1/1)
+- ✅ Esempi e Documentazione (3 esempi completi)
 
 #### v0.3.0 (GOAP) - 0%
 - ⏳ In pianificazione
@@ -378,17 +426,17 @@ Questo è un progetto in evoluzione. Idee e suggerimenti sono benvenuti!
 
 ### Overall Progress to v1.0.0 Stable
 ```
-████████░░░░░░░░░░░░░░░░░░░░ 25% Complete
+████████████████░░░░░░░░░░░░ 50% Complete
 
-Phase 1: ████████████████████ 100% ✅
-Phase 2: ░░░░░░░░░░░░░░░░░░░░   0% ⏳
-Phase 3: ░░░░░░░░░░░░░░░░░░░░   0% ⏳
-Phase 4: ░░░░░░░░░░░░░░░░░░░░   0% ⏳
-Phase 5: ░░░░░░░░░░░░░░░░░░░░   0% ⏳
+Phase 1: ████████████████████ 100% ✅ (Nodi + Sensori)
+Phase 2: ████████████████████ 100% ✅ (Utility AI)
+Phase 3: ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (GOAP)
+Phase 4: ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Debug Tools)
+Phase 5: ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Pathfinding)
 ```
 
 ---
 
-**Ultima Modifica**: 2025-11-09 (Completamento totale Phase 1)  
-**Versione Corrente**: v0.1.0-beta (COMPLETA)  
-**Prossima Release**: v0.2.0 (Utility AI System)
+**Ultima Modifica**: 2025-11-09 (Completamento Phase 2)  
+**Versione Corrente**: v0.2.0-beta (COMPLETA)  
+**Prossima Release**: v0.3.0 (GOAP System)
