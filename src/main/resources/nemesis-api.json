@@ -1,0 +1,16 @@
+{
+  "config": {
+    "async_enabled": true,
+    "async_thread_pool_size": 0,
+    "tick_rate": 20,
+    "debug_logging": false,
+    "behavior_cache_enabled": true
+  },
+  "comments": {
+    "async_enabled": "Enable async behavior execution support",
+    "async_thread_pool_size": "Thread pool size for async operations (0 = auto)",
+    "tick_rate": "Target ticks per second for brain updates",
+    "debug_logging": "Enable verbose debug logging for AI operations",
+    "behavior_cache_enabled": "Cache behavior tree nodes for better performance"
+  }
+}

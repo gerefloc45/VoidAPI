@@ -1,0 +1,242 @@
+# AI-Core Framework - .gitignore
+
+# ============================================
+# GRADLE BUILD FILES (CRITICAL)
+# ============================================
+.gradle/
+build/
+!gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Gradle cache
+.gradle
+**/build/
+!src/**/build/
+
+# ============================================
+# COMPILED OUTPUT (CRITICAL)
+# ============================================
+bin/
+out/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Exclude built JARs (they should be rebuilt)
+build/libs/*.jar
+build/libs/*.jar.md5
+build/libs/*.jar.sha1
+build/libs/*.jar.sha256
+build/libs/*.jar.sha512
+
+# ============================================
+# IDE FILES (CRITICAL - Contains local paths)
+# ============================================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.classpath
+.project
+.settings/
+*.launch
+.metadata
+.recommenders
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ============================================
+# MINECRAFT RUN DIRECTORIES (CRITICAL)
+# ============================================
+run/
+runs/
+minecraft/
+.minecraft/
+
+# Minecraft logs
+logs/
+crash-reports/
+*.log
+
+# Minecraft cache
+usercache.json
+usernamecache.json
+
+# Server files
+server.properties
+ops.json
+whitelist.json
+banned-players.json
+banned-ips.json
+
+# World data (if testing)
+world/
+world_nether/
+world_the_end/
+
+# ============================================
+# FABRIC SPECIFIC
+# ============================================
+remappedSrc/
+.fabric/
+fabric-server-launch.jar
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# LOGS AND DEBUG FILES
+# ============================================
+*.log
+*.log.*
+hs_err_pid*
+replay_pid*
+
+# ============================================
+# SENSITIVE DATA (CRITICAL - NEVER COMMIT)
+# ============================================
+# API Keys and secrets
+*.key
+*.pem
+*.p12
+secrets.properties
+local.properties
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Credentials
+credentials.json
+auth.json
+tokens.json
+
+# ============================================
+# BACKUP FILES
+# ============================================
+*.bak
+*.backup
+*~
+*.orig
+
+# ============================================
+# DOCUMENTATION BUILD
+# ============================================
+docs/_build/
+site/
+.jekyll-cache/
+
+# ============================================
+# PACKAGE MANAGERS
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# OS SPECIFIC
+# ============================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# TESTING
+# ============================================
+test-output/
+test-results/
+coverage/
+*.coverage
+.nyc_output/
+
+# ============================================
+# CUSTOM PROJECT SPECIFIC
+# ============================================
+
+# Local development notes (keep private)
+TODO.local.md
+NOTES.local.md
+dev-notes/
+
+# Local test configurations
+test-config.local.json
+local-test-data/
+
+# Performance profiling data
+*.hprof
+*.prof
+profiler/
+
+# ============================================
+# KEEP THESE FILES (Important for project)
+# ============================================
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!.gitignore
+!README.md
+!LICENSE
+!CHANGELOG.md
+
+# ============================================
+# NOTES
+# ============================================
+# This .gitignore protects:
+# 1. Build artifacts (can be regenerated)
+# 2. IDE configurations (local to each dev)
+# 3. Minecraft run directories (testing data)
+# 4. Sensitive credentials (security)
+# 5. Temporary and cache files (unnecessary)
+#
+# Always commit:
+# - Source code (src/)
+# - Documentation (*.md)
+# - Gradle wrapper (gradle/)
+# - Configuration (gradle.properties, build.gradle)
+# - Resources (src/main/resources/)
