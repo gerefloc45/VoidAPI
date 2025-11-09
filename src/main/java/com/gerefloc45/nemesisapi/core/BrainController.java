@@ -1,8 +1,8 @@
-package com.myname.nemesisapi.core;
+package com.gerefloc45.nemesisapi.core;
 
-import com.myname.nemesisapi.api.BehaviorContext;
-import com.myname.nemesisapi.api.BehaviorTree;
-import com.myname.nemesisapi.api.Blackboard;
+import com.gerefloc45.nemesisapi.api.BehaviorContext;
+import com.gerefloc45.nemesisapi.api.BehaviorTree;
+import com.gerefloc45.nemesisapi.api.Blackboard;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.world.ServerWorld;
 

@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.myname.nemesisapi.NemesisAPIMod"
+      "com.gerefloc45.nemesisapi.NemesisAPIMod"
     ]
   },
   "depends": {

@@ -67,8 +67,8 @@ BrainTicker.registerEntity(entity);
 
 ```gradle
 dependencies {
-    modImplementation "com.myname:nemesis-api:0.1.0"
-    include "com.myname:nemesis-api:0.1.0"
+    modImplementation "com.gerefloc45:nemesis-api:0.1.0"
+    include "com.gerefloc45:nemesis-api:0.1.0"
 }
 ```
 
@@ -78,13 +78,16 @@ dependencies {
 
 ```
 src/main/java/com/gerefloc45/nemesisapi/
-├─ AnimationDescriptor.java   // Data structure describing runtime animations
-├─ AnimationManager.java      // Contract for procedural animation engines
-├─ BossAI.java                // Interface for boss behaviour
-├─ BossAction.java            // Abstract base for complex multi-stage actions
-├─ MobAI.java                 // Interface for non-boss entities
-├─ NemesisAIRegistry.java     // Thread-safe registry for suppliers
-└─ TargetSelector.java        // Strategy interface for selecting targets
+├─ NemesisAPIMod.java         // Main mod initialization
+├─ api/                       // Public API interfaces and classes
+│  ├─ Behavior.java           // Base behavior interface
+│  ├─ BehaviorTree.java       // Behavior tree system
+│  ├─ Blackboard.java         // Shared memory system
+│  └─ nodes/                  // Behavior tree nodes
+├─ core/                      // Core framework components
+│  ├─ BrainController.java    // Entity AI management
+│  └─ BrainTicker.java        // AI update system
+└─ util/                      // Utility classes
 ```
 
 In addition the repository ships with:
@@ -96,7 +99,7 @@ In addition the repository ships with:
 
 ## Registries & providers
 
-NemesisAI exposes a single static registry class: [`NemesisAIRegistry`](src/main/java/com/gerefloc45/nemesisapi/NemesisAIRegistry.java).
+Nemesis-API provides a centralized brain controller through the `BrainController` class.
 It stores suppliers (factories) for boss AI, mob AI, target selectors and animation managers. Using
 suppliers instead of concrete instances ensures that each entity obtains a fresh controller and that
 state is not leaked across instantiations.

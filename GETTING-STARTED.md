@@ -41,8 +41,8 @@ repositories {
 }
 
 dependencies {
-    modImplementation "com.myname:nemesis-api:0.1.0"
-    include "com.myname:nemesis-api:0.1.0"
+    modImplementation "com.gerefloc45:nemesis-api:0.1.0"
+    include "com.gerefloc45:nemesis-api:0.1.0"
 }
 ```
 
@@ -73,10 +73,10 @@ Let's create a simple AI that makes a zombie wander around and attack nearby pla
 ```java
 package com.yourmod.ai;
 
-import com.myname.nemesisapi.api.*;
-import com.myname.nemesisapi.api.nodes.*;
-import com.myname.nemesisapi.core.*;
-import com.myname.nemesisapi.util.EntityUtil;
+import com.gerefloc45.nemesisapi.api.*;
+import com.gerefloc45.nemesisapi.api.nodes.*;
+import com.gerefloc45.nemesisapi.core.*;
+import com.gerefloc45.nemesisapi.util.EntityUtil;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 
@@ -305,7 +305,7 @@ BrainTicker.registerEntity(entity);
 Sensors automatically detect entities and update the blackboard.
 
 ```java
-import com.myname.nemesisapi.api.perception.*;
+import com.gerefloc45.nemesisapi.api.perception.*;
 
 public class AdvancedGuardAI {
     

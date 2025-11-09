@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.api.perception;
+package com.gerefloc45.nemesisapi.api.perception;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.Vec3d;

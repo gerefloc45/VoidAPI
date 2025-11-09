@@ -45,8 +45,8 @@ repositories {
 }
 
 dependencies {
-    modImplementation "com.myname:nemesis-api:0.1.0"
-    include "com.myname:nemesis-api:0.1.0" // Bundle it with your mod
+    modImplementation "com.gerefloc45:nemesis-api:0.1.0"
+    include "com.gerefloc45:nemesis-api:0.1.0" // Bundle it with your mod
 }
 ```
 
@@ -67,8 +67,8 @@ Add to your `fabric.mod.json`:
 ### 1. Create a Simple Behavior
 
 ```java
-import com.myname.nemesisapi.api.Behavior;
-import com.myname.nemesisapi.api.BehaviorContext;
+import com.gerefloc45.nemesisapi.api.Behavior;
+import com.gerefloc45.nemesisapi.api.BehaviorContext;
 
 public class WanderBehavior implements Behavior {
     @Override
@@ -89,8 +89,8 @@ public class WanderBehavior implements Behavior {
 ### 2. Build a Behavior Tree
 
 ```java
-import com.myname.nemesisapi.api.BehaviorTree;
-import com.myname.nemesisapi.api.nodes.*;
+import com.gerefloc45.nemesisapi.api.BehaviorTree;
+import com.gerefloc45.nemesisapi.api.nodes.*;
 
 // Create a behavior tree with selector (OR) logic
 BehaviorTree tree = new BehaviorTree(
@@ -104,8 +104,8 @@ BehaviorTree tree = new BehaviorTree(
 ### 3. Attach to an Entity
 
 ```java
-import com.myname.nemesisapi.core.BrainController;
-import com.myname.nemesisapi.core.BrainTicker;
+import com.gerefloc45.nemesisapi.core.BrainController;
+import com.gerefloc45.nemesisapi.core.BrainTicker;
 
 // In your entity initialization or spawn event
 LivingEntity entity = ...; // Your entity
@@ -200,7 +200,7 @@ blackboard.clear();
 ### Async Behaviors
 
 ```java
-import com.myname.nemesisapi.util.AsyncHelper;
+import com.gerefloc45.nemesisapi.util.AsyncHelper;
 
 public class PathfindingBehavior implements Behavior {
     private CompletableFuture<Path> pathFuture;
@@ -230,7 +230,7 @@ public class PathfindingBehavior implements Behavior {
 ### Entity Utilities
 
 ```java
-import com.myname.nemesisapi.util.EntityUtil;
+import com.gerefloc45.nemesisapi.util.EntityUtil;
 
 // Find nearest player
 Optional<PlayerEntity> player = EntityUtil.findNearestPlayer(entity, 16.0);
@@ -279,7 +279,7 @@ BrainTicker.unregisterEntity(entity);
 ## 🏗️ Project Structure
 
 ```
-com.myname.nemesisapi
+com.gerefloc45.nemesisapi
 ├── api/                    # Public API
 │   ├── Behavior.java       # Base behavior interface
 │   ├── BehaviorTree.java   # Behavior tree wrapper

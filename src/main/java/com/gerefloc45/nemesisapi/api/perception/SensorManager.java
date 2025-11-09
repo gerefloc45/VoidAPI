@@ -1,6 +1,6 @@
-package com.myname.nemesisapi.api.perception;
+package com.gerefloc45.nemesisapi.api.perception;
 
-import com.myname.nemesisapi.api.BehaviorContext;
+import com.gerefloc45.nemesisapi.api.BehaviorContext;
 
 import java.util.ArrayList;
 import java.util.List;

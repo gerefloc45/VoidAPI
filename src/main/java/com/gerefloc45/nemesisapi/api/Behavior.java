@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.api;
+package com.gerefloc45.nemesisapi.api;
 
 /**
  * Base interface for all AI behaviors.

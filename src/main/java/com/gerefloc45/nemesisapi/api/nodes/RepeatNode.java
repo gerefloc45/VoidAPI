@@ -1,7 +1,7 @@
-package com.myname.nemesisapi.api.nodes;
+package com.gerefloc45.nemesisapi.api.nodes;
 
-import com.myname.nemesisapi.api.Behavior;
-import com.myname.nemesisapi.api.BehaviorContext;
+import com.gerefloc45.nemesisapi.api.Behavior;
+import com.gerefloc45.nemesisapi.api.BehaviorContext;
 
 /**
  * Repeat node - repeats its child behavior a specified number of times.

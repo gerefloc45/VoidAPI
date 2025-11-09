@@ -1,7 +1,7 @@
-package com.myname.nemesisapi;
+package com.gerefloc45.nemesisapi;
 
-import com.myname.nemesisapi.core.BrainTicker;
-import com.myname.nemesisapi.util.AsyncHelper;
+import com.gerefloc45.nemesisapi.core.BrainTicker;
+import com.gerefloc45.nemesisapi.util.AsyncHelper;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.api;
+package com.gerefloc45.nemesisapi.api;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.world.ServerWorld;

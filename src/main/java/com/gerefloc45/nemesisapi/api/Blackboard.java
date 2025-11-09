@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.api;
+package com.gerefloc45.nemesisapi.api;
 
 import java.util.HashMap;
 import java.util.Map;

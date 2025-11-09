@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.api;
+package com.gerefloc45.nemesisapi.api;
 
 /**
  * Main behavior tree class that wraps a root behavior.

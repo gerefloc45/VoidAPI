@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.util;
+package com.gerefloc45.nemesisapi.util;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;

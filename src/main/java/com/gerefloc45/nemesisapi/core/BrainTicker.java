@@ -1,4 +1,4 @@
-package com.myname.nemesisapi.core;
+package com.gerefloc45.nemesisapi.core;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.LivingEntity;

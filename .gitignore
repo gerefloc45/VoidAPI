@@ -67,6 +67,14 @@ nbdist/
 .nb-gradle/
 
 # ============================================
+# DOCUMENTATION FILES (exclude drafts/internal)
+# ============================================
+# Internal/draft documentation files
+AI-ROADMAP.md
+README-AI-CORE.md
+DOCUMENTATION-INDEX.md
+
+# ============================================
 # MINECRAFT RUN DIRECTORIES (CRITICAL)
 # ============================================
 run/
@@ -221,6 +229,8 @@ profiler/
 !gradle/wrapper/gradle-wrapper.properties
 !.gitignore
 !README.md
+!README-NEMESIS-API.md
+!GETTING-STARTED.md
 !LICENSE
 !CHANGELOG.md
 

@@ -1,32 +1,32 @@
-package com.myname.nemesisapi.api.nodes;
+package com.gerefloc45.nemesisapi.api.nodes;
 
-import com.myname.nemesisapi.api.Behavior;
-import com.myname.nemesisapi.api.BehaviorContext;
-import com.myname.nemesisapi.api.BehaviorNode;
+import com.gerefloc45.nemesisapi.api.Behavior;
+import com.gerefloc45.nemesisapi.api.BehaviorContext;
+import com.gerefloc45.nemesisapi.api.BehaviorNode;
 
 /**
- * Sequence node (AND logic) - executes children until one fails.
- * Returns SUCCESS if all children succeed.
- * Returns FAILURE if any child fails.
+ * Selector node (OR logic) - executes children until one succeeds.
+ * Returns SUCCESS if any child succeeds.
+ * Returns FAILURE if all children fail.
  * Returns RUNNING if current child is running.
  * 
  * @author Nemesis-API Framework
  * @version 1.0.0
  */
-public class SequenceNode extends BehaviorNode {
+public class SelectorNode extends BehaviorNode {
     private int currentChildIndex = 0;
 
     /**
-     * Creates a new sequence node.
+     * Creates a new selector node.
      */
-    public SequenceNode() {
+    public SelectorNode() {
         super();
     }
 
     @Override
     public Status execute(BehaviorContext context) {
         if (children.isEmpty()) {
-            return Status.SUCCESS;
+            return Status.FAILURE;
         }
 
         while (currentChildIndex < children.size()) {
@@ -43,23 +43,23 @@ public class SequenceNode extends BehaviorNode {
                 case SUCCESS:
                     child.onEnd(context, status);
                     reset();
-                    currentChildIndex++;
-                    break;
+                    currentChildIndex = 0;
+                    return Status.SUCCESS;
                     
                 case FAILURE:
                     child.onEnd(context, status);
                     reset();
-                    currentChildIndex = 0;
-                    return Status.FAILURE;
+                    currentChildIndex++;
+                    break;
                     
                 case RUNNING:
                     return Status.RUNNING;
             }
         }
 
-        // All children succeeded
+        // All children failed
         currentChildIndex = 0;
-        return Status.SUCCESS;
+        return Status.FAILURE;
     }
 
     @Override
