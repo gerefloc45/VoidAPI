@@ -111,6 +111,16 @@ public class SensorManager {
     }
 
     /**
+     * Gets the current tick count.
+     * Useful for debugging and tracking sensor manager lifetime.
+     *
+     * @return Current tick count
+     */
+    public int getCurrentTick() {
+        return currentTick;
+    }
+
+    /**
      * Clears all sensors.
      */
     public void clear() {

@@ -63,7 +63,6 @@ public class ParallelNode extends BehaviorNode {
 
         int successCount = 0;
         int failureCount = 0;
-        int runningCount = 0;
 
         // Execute all children
         for (int i = 0; i < children.size(); i++) {
@@ -87,9 +86,8 @@ public class ParallelNode extends BehaviorNode {
             } else if (newStatus == Status.FAILURE) {
                 child.onEnd(context, newStatus);
                 failureCount++;
-            } else {
-                runningCount++;
             }
+            // If RUNNING, just continue to next child
         }
 
         // Determine overall status based on policy

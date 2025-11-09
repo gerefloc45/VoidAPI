@@ -110,7 +110,6 @@ public class EntitySensor<T extends LivingEntity> implements Sensor {
      * @param context The behavior context
      * @return List of detected entities
      */
-    @SuppressWarnings("unchecked")
     public List<T> getDetectedEntities(BehaviorContext context) {
         return context.getBlackboard()
             .<List<T>>get(blackboardKey)
