@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
  * It contains no gameplay content and is designed to be used as a library.
  * 
  * @author VoidAPI Framework
- * @version 0.2.0
+ * @version 0.2.2
  */
 public class VoidAPIMod implements ModInitializer {
     public static final String MOD_ID = "voidapi";
@@ -22,7 +22,7 @@ public class VoidAPIMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Initializing {} Framework v0.2.0", MOD_NAME);
+        LOGGER.info("Initializing {} Framework v0.2.2", MOD_NAME);
 
         // Initialize the brain ticker system
         BrainTicker.initialize();

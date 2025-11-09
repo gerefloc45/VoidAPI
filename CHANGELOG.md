@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.2.2] - 2025-11-09
+
+### 🔧 Changed
+
+- **Client-Side Support**: Added proper client-side entrypoint (VoidAPIClient)
+- **Architecture**: Improved client/server separation for better modularity
+- **Documentation**: Added CLIENT-SERVER-ARCHITECTURE.md for deployment guidance
+- **Build**: Recompiled with updated configuration
+
+### 📚 Documentation
+
+- Added **CLIENT-SERVER-ARCHITECTURE.md** - Complete client/server architecture guide
+- Updated **fabric.mod.json** - Added client entrypoint
+
+### 🎯 Technical Details
+
+- Proper Fabric entrypoint structure for both server and client
+- All components remain side-agnostic and thread-safe
+- Ready for both dedicated servers and single-player/multiplayer
+
+### ⚠️ Breaking Changes
+
+**None!** This is a patch release with no breaking changes.
+
+---
+
 ## [0.2.0] - 2025-11-09
 
 ### 🎉 Release Highlights
