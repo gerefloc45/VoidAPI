@@ -7,6 +7,7 @@
 
 ## 📚 Core Concepts
 - [Behavior Trees](Behavior-Trees)
+- [Finite State Machines](FSM-Guide)
 - [Blackboard](Blackboard)
 - [Brain Controller](Brain-Controller)
 
@@ -39,4 +40,4 @@
 
 ---
 
-**v0.2.0-beta**
+**v0.3.0**

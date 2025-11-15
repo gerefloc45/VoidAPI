@@ -24,6 +24,7 @@ Just browse the `.md` files in this folder with any Markdown viewer!
 
 ### Core Documentation
 - `Behavior-Trees.md` - Behavior tree fundamentals
+- `FSM-Guide.md` - Finite State Machine system
 - `Blackboard.md` - Shared memory system
 - `Brain-Controller.md` - AI management
 - `Behavior-Context.md` - Execution context
@@ -98,5 +99,5 @@ To add or update wiki pages:
 
 ---
 
-**Last Updated**: 2025-11-09  
-**Wiki Version**: v0.2.0-beta
+**Last Updated**: 2025-11-15  
+**Wiki Version**: v0.3.0

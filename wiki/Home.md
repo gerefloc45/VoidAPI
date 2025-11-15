@@ -11,6 +11,7 @@ Welcome to the ** switch (Welcome to the **Nemesis-API** documentation! This is 
 
 ### Core Concepts
 - **[Behavior Trees](Behavior-Trees)** - Understanding the foundation
+- **[Finite State Machines](FSM-Guide)** - State-based AI architecture
 - **[Blackboard System](Blackboard)** - Shared memory for AI
 - **[Brain Controller](Brain-Controller)** - Managing entity AI
 - **[Behavior Context](Behavior-Context)** - Execution context
@@ -61,19 +62,21 @@ Welcome to the ** switch (Welcome to the **Nemesis-API** documentation! This is 
 
 ## 📊 Current Version
 
-**v0.2.0-beta** - Utility AI System Complete
+**v0.3.0** - Finite State Machine System Complete
 
 ### What's Included
 - ✅ Complete Behavior Tree system
-- ✅ 11 behavior nodes (basic + advanced)
+- ✅ 11 behavior tree nodes (basic + advanced)
+- ✅ 9 FSM components (core + hierarchical + persistence)
 - ✅ 4 perception sensors
 - ✅ Full Utility AI system
 - ✅ 13+ response curves
 - ✅ Comprehensive examples
 
 ### Quick Stats
-- 📦 29 Java classes
+- 📦 50 Java classes
 - 🎯 11 behavior tree nodes
+- 🔄 9 FSM components
 - 👁️ 6 perception classes
 - 🧮 13+ response curves
 - 📚 Complete documentation

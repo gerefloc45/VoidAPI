@@ -254,6 +254,7 @@ public class SimpleGuardAI {
 
 Now that you have a basic AI working, explore:
 
+- **[Finite State Machines](FSM-Guide)** - State-based AI architecture
 - **[Advanced Nodes](Advanced-Nodes)** - ParallelNode, RepeatNode, ConditionalNode
 - **[Utility AI](Utility-AI-Overview)** - Score-based decision making
 - **[More Sensors](Sensors-Overview)** - BlockSensor, SoundSensor
