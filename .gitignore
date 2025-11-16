@@ -70,10 +70,9 @@ nbdist/
 # DOCUMENTATION FILES (exclude drafts/internal)
 # ============================================
 # Internal/draft documentation files
-README-AI-CORE.md
-CLIENT-SERVER-ARCHITECTURE.md
+
 AI-ROADMAP.md
-RELEASE-NOTES-V0.2.0.md
+CHANGELOG.md
 
 # ============================================
 # MINECRAFT RUN DIRECTORIES (CRITICAL)

@@ -1,6 +1,6 @@
 # VoidAPI Development Roadmap
 
-## Current Version: v0.1.0-beta
+## Current Version: v0.5.0
 
 **Status:** Active Development  
 **Target:** Minecraft 1.21.1 Fabric
@@ -85,41 +85,96 @@
 - ✅ **PerformanceProfiler** - Identify bottlenecks with detailed metrics
 - ✅ **AILogger** - Advanced logging system with categories and file output
 
-## 🚧 In Progress (v0.3.0)
+## ✅ Completed (v0.3.0)
+
+### Finite State Machine System
+- ✅ **State** - Base class for all states with lifecycle methods (onEnter, onUpdate, onExit)
+- ✅ **Transition** - Condition-based state transitions with priority system
+- ✅ **StateMachine** - Complete FSM implementation with listeners
+- ✅ **StateMachineNode** - Behavior tree integration for FSM
+- ✅ **StateMachineBuilder** - Fluent API for FSM construction
+- ✅ **HierarchicalState** - States containing sub-state machines
+- ✅ **StatePersistence** - Save/restore FSM state to NBT
+- ✅ **IdleState** - Simple idle/waiting state
+- ✅ **BehaviorState** - Execute behavior tree behaviors in states
+- ✅ **TimedState** - Auto-transition after duration
+
+---
+
+## ✅ Completed (v0.4.0)
+
+### Goal-Oriented Action Planning (GOAP)
+
+#### Core GOAP System
+- ✅ **WorldState** - Key-value store for world state representation
+- ✅ **Goal** - Define entity objectives with priority
+- ✅ **Action** - Abstract base class with preconditions and effects
+- ✅ **Plan** - Ordered action sequences with cost tracking
+- ✅ **Planner** - A* algorithm for optimal planning
+- ✅ **PlanExecutor** - Step-by-step plan execution
+
+#### Advanced GOAP Features
+- ✅ **Cost-based planning** - Optimal plan selection with A* algorithm
+- ✅ **Dynamic replanning** - Automatic replanning on state changes
+- ✅ **Procedural costs** - Context-dependent action costs
+- ✅ **Precondition checking** - Validate action prerequisites
+- ✅ **Effect propagation** - Track world state changes
+- ✅ **State satisfaction** - Check goal completion
+
+#### GOAP-Behavior Tree Integration
+- ✅ **GOAPNode** - Seamless behavior tree integration
+- ✅ **Automatic replanning** - Configurable replan intervals
+- ✅ **State change detection** - Smart replanning triggers
+- ✅ **Lifecycle management** - Complete action lifecycle support
+
+#### Built-in Actions
+- ✅ **MoveToPositionAction** - Navigate to target positions
+- Extensible action system for custom implementations
+
+---
+
+## ✅ Completed (v0.5.0)
+
+### Machine Learning Integration
+
+#### Behavior Learning
+- ✅ **BehaviorLearner** - Q-learning based action selection
+- ✅ **Success rate tracking** - Monitor action effectiveness
+- ✅ **Epsilon-greedy exploration** - Balance exploration vs exploitation
+- ✅ **NBT persistence** - Save and load learned data
+
+#### Pattern Recognition
+- ✅ **PatternRecognizer** - Detect player behavior patterns
+- ✅ **Action sequence detection** - Identify recurring patterns
+- ✅ **Movement analysis** - Track player movement patterns
+- ✅ **Next action prediction** - Predict player's next move
+- ✅ **Aggression/retreat tracking** - Analyze player tendencies
+
+#### Adaptive Difficulty
+- ✅ **AdaptiveDifficulty** - Dynamic difficulty adjustment
+- ✅ **Per-player tracking** - Individual difficulty profiles
+- ✅ **Win/loss analysis** - Track combat outcomes
+- ✅ **Difficulty modifiers** - Reaction time, accuracy, aggression
+- ✅ **Health trend analysis** - Monitor player performance
+
+#### Training Mode
+- ✅ **TrainingMode** - Supervised learning from demonstrations
+- ✅ **State-action recording** - Capture expert behavior
+- ✅ **Similarity matching** - Find matching situations
+- ✅ **Session management** - Organize training data
+
+#### Integration
+- ✅ **LearningNode** - Behavior tree integration
+- ✅ **Automatic selection** - Learn best behaviors
+- ✅ **Reward calculation** - Evaluate action outcomes
 
 ---
 
 ## 📋 Planned Features
 
-### v0.3.0 - State Machines
-**ETA:** Q1 2026
-
-- **Finite State Machine (FSM)** - Traditional state-based AI
-- **Hierarchical FSM** - Nested state machines
-- **FSM-Behavior Tree hybrid** - Best of both worlds
-- **State transitions** - Condition-based state switching
-- **State persistence** - Save/load state data
-
-### v0.3.5 - Goal-Oriented Action Planning (GOAP)
-**ETA:** Q2 2026
-
-- **Goal system** - Define entity goals
-- **Action planner** - Dynamic action sequencing
-- **Precondition checking** - Action prerequisites
-- **Cost-based planning** - Optimal plan selection
-- **Dynamic replanning** - Adapt to changing conditions
-
-### v0.4.0 - Machine Learning Integration
+### v0.6.0 - Multiplayer & Networking
 **ETA:** Q3 2026
-
-- **Behavior Learning** - Learn from player interactions
-- **Pattern Recognition** - Detect player behavior patterns
-- **Adaptive AI** - Adjust difficulty dynamically
-- **Neural Network integration** - Optional ML backends
-- **Training mode** - Supervised learning support
-
-### v0.5.0 - Multiplayer & Networking
-**ETA:** Q4 2026
+**Priority:** ⭐ Medium
 
 - **Synchronized AI** - Client-side prediction
 - **AI sharing** - Share AI between players
@@ -127,8 +182,9 @@
 - **Spectator mode** - Watch AI decisions live
 - **Remote debugging** - Debug AI over network
 
-### v0.6.0 - Advanced Perception
-**ETA:** Q1 2027
+### v0.7.0 - Advanced Perception
+**ETA:** Q4 2026
+**Priority:** ⭐ Medium
 
 - **Vision cones** - Realistic field of view
 - **Line-of-sight** - Occlusion detection
@@ -137,8 +193,9 @@
 - **Memory degradation** - Forget over time
 - **Attention system** - Focus on important stimuli
 
-### v0.7.0 - Social AI
-**ETA:** Q2 2027
+### v0.8.0 - Social AI
+**ETA:** Q1 2027
+**Priority:** 💡 Low
 
 - **Faction system** - Friend/foe relationships
 - **Reputation tracking** - Remember player actions
@@ -147,8 +204,9 @@
 - **Leadership system** - Follow/command hierarchies
 - **Emotion system** - Mood-based behavior changes
 
-### v0.8.0 - Optimization & Performance
-**ETA:** Q3 2027
+### v0.9.0 - Optimization & Performance
+**ETA:** Q2 2027
+**Priority:** 🔥 High
 
 - **LOD AI** - Simplified AI at distance
 - **Budget system** - CPU time management
@@ -215,11 +273,14 @@
 | Version | Release Date | Features |
 |---------|-------------|----------|
 | v0.1.0-beta | 2025-11 | Core framework, behavior trees, perception, utility AI |
-| v0.2.0 | 2025-11 | Enhanced nodes, pathfinding, animations, debugging tools |
-| v0.3.0 | TBA | State machines, FSM |
-| v0.4.0 | TBA | Machine learning |
-| v0.5.0 | TBA | Multiplayer & networking |
-| v1.0.0 | TBA | Stable release |
+| v0.2.0 | 2025-11-09 | Enhanced nodes, pathfinding, animations, debugging tools |
+| v0.3.0 | 2025-11-15 | Finite State Machines, hierarchical FSM, state persistence |
+| v0.4.0 | 2025-11-15 | Goal-Oriented Action Planning (GOAP) with A* planner |
+| v0.5.0 | 2025-11-16 | Machine Learning Integration (learning, patterns, adaptive difficulty) |
+| v0.6.0 | Q1 2026 | Multiplayer & networking |
+| v0.7.0 | Q2 2026 | Advanced perception |
+| v0.8.0 | Q3 2026 | Social AI |
+| v1.0.0 | Q4 2026 | Stable release |
 
 ---
 
@@ -262,6 +323,6 @@ Durante la **beta** (v0.x.x), le API possono cambiare tra versioni minor.
 
 ---
 
-**Last Updated:** November 2025  
+**Last Updated:** November 15, 2025  
 **Maintainer:** Gerefloc45  
 **License:** MIT

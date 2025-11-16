@@ -24,8 +24,8 @@ Yes, VoidAPI is server-side only. No client installation needed.
 
 See the [Installation](Installation) guide. TL;DR:
 ```gradle
-modImplementation "com.gerefloc45:voidapi:0.3.0"
-include "com.gerefloc45:voidapi:0.3.0"
+modImplementation "com.gerefloc45:voidapi:0.4.0"
+include "com.gerefloc45:voidapi:0.4.0"
 ```
 
 ### Do I need to bundle it with my mod?

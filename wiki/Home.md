@@ -62,21 +62,23 @@ Welcome to the **VoidAPI** documentation! This is a powerful, modular AI framewo
 
 ## 📊 Current Version
 
-**v0.3.0** - Finite State Machine System Complete
+**v0.4.0** - Goal-Oriented Action Planning Complete
 
 ### What's Included
 - ✅ Complete Behavior Tree system
 - ✅ 11 behavior tree nodes (basic + advanced)
 - ✅ 9 FSM components (core + hierarchical + persistence)
+- ✅ 8 GOAP components (planning + execution + integration)
 - ✅ 4 perception sensors
 - ✅ Full Utility AI system
 - ✅ 13+ response curves
 - ✅ Comprehensive examples
 
 ### Quick Stats
-- 📦 50 Java classes
+- 📦 58 Java classes
 - 🎯 11 behavior tree nodes
 - 🔄 9 FSM components
+- 🎯 8 GOAP components
 - 👁️ 6 perception classes
 - 🧮 13+ response curves
 - 📚 Complete documentation
