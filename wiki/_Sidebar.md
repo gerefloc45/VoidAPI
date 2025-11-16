@@ -8,6 +8,8 @@
 ## 📚 Core Concepts
 - [Behavior Trees](Behavior-Trees)
 - [Finite State Machines](FSM-Guide)
+- [GOAP](GOAP-Guide)
+- [Machine Learning](ML-Guide)
 - [Blackboard](Blackboard)
 - [Brain Controller](Brain-Controller)
 
@@ -28,6 +30,12 @@
 - [Considerations](Considerations)
 - [Response Curves](Response-Curves)
 
+## 🧠 Machine Learning
+- [ML Guide](ML-Guide)
+- [Behavior Learning](Behavior-Learning)
+- [Pattern Recognition](Pattern-Recognition)
+- [Adaptive Difficulty](Adaptive-Difficulty)
+
 ## 📖 Examples
 - [Basic Examples](Basic-Examples)
 - [Combat AI](Combat-AI-Tutorial)
@@ -40,4 +48,4 @@
 
 ---
 
-**v0.4.0**
+**v0.5.1**

@@ -24,8 +24,8 @@ Yes, VoidAPI is server-side only. No client installation needed.
 
 See the [Installation](Installation) guide. TL;DR:
 ```gradle
-modImplementation "com.gerefloc45:voidapi:0.4.0"
-include "com.gerefloc45:voidapi:0.4.0"
+modImplementation "com.gerefloc45:voidapi:0.5.1"
+include "com.gerefloc45:voidapi:0.5.1"
 ```
 
 ### Do I need to bundle it with my mod?
@@ -275,15 +275,110 @@ ServerEntityEvents.ENTITY_UNLOAD.register((entity, world) -> {
 });
 ```
 
+## GOAP (Goal-Oriented Action Planning)
+
+### What is GOAP?
+
+GOAP is a planning system where AI entities create action sequences to achieve goals. See [GOAP Guide](GOAP-Guide) for details.
+
+### When should I use GOAP?
+
+Use GOAP when:
+- Entities need to solve multi-step problems
+- Behavior depends on dynamic world state
+- You want emergent, flexible AI
+- Planning ahead is important
+
+### How do I create a GOAP plan?
+
+```java
+WorldState currentState = new WorldState();
+currentState.set("hasWeapon", false);
+
+Goal goal = new Goal("KillEnemy", goalState, 10.0f);
+List<Action> actions = Arrays.asList(new GetWeaponAction(), new AttackAction());
+
+Planner planner = new Planner();
+Plan plan = planner.plan(context, currentState, goal, actions);
+```
+
+### Can I integrate GOAP with Behavior Trees?
+
+Yes! Use `GOAPNode`:
+```java
+GOAPNode goapNode = new GOAPNode(goal, actions, stateProvider);
+tree.addChild(goapNode);
+```
+
+## Machine Learning
+
+### Does VoidAPI support Machine Learning?
+
+Yes! v0.5.0 introduced 5 ML components:
+- **BehaviorLearner** - Q-learning for action selection
+- **PatternRecognizer** - Detect player patterns
+- **AdaptiveDifficulty** - Dynamic challenge adjustment
+- **TrainingMode** - Supervised learning
+- **LearningNode** - BT integration
+
+### How does Behavior Learning work?
+
+```java
+BehaviorLearner learner = new BehaviorLearner(entity);
+learner.recordAction("attack", context);
+learner.recordOutcome("attack", true, 1.0f); // Success with reward
+String bestAction = learner.getBestAction(context);
+```
+
+### Can AI learn from player behavior?
+
+Yes, use `PatternRecognizer`:
+```java
+PatternRecognizer recognizer = new PatternRecognizer();
+recognizer.recordPlayerAction(player, "attack", context);
+List<Pattern> patterns = recognizer.detectPatterns(player);
+String prediction = recognizer.predictNextAction(player);
+```
+
+### How does Adaptive Difficulty work?
+
+```java
+AdaptiveDifficulty difficulty = new AdaptiveDifficulty(entity);
+difficulty.recordCombatEnd(player, playerWon);
+
+// Get difficulty modifiers
+float reactionTime = difficulty.getReactionTimeMultiplier(player);
+float accuracy = difficulty.getAccuracyMultiplier(player);
+float aggression = difficulty.getAggressionMultiplier(player);
+```
+
+### Is ML data persistent?
+
+Yes! Learning data is saved to NBT and persists across server restarts.
+
+### Does ML affect performance?
+
+Minimal impact:
+- Learning updates: <1ms per action
+- Pattern detection: ~2-5ms per player
+- Memory overhead: ~1KB per entity
+
 ## Advanced
-
-### Can I use GOAP (Goal-Oriented Action Planning)?
-
-Not yet! GOAP is planned for v0.3.0. See [Roadmap](../AI-ROADMAP.md).
 
 ### Can I integrate with other AI mods?
 
 Yes, but they may conflict if both try to control the same entity. Use one system per entity.
+
+### Can I train AI with demonstrations?
+
+Yes, use `TrainingMode`:
+```java
+TrainingMode training = new TrainingMode(entity);
+training.startTraining("patrol_route");
+training.recordDemonstration(context, behavior);
+training.endTraining();
+Behavior learned = training.getLearnedBehavior(context);
+```
 
 ### Is there a visual editor?
 

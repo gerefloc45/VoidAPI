@@ -12,6 +12,8 @@ Welcome to the **VoidAPI** documentation! This is a powerful, modular AI framewo
 ### Core Concepts
 - **[Behavior Trees](Behavior-Trees)** - Understanding the foundation
 - **[Finite State Machines](FSM-Guide)** - State-based AI architecture
+- **[Goal-Oriented Action Planning](GOAP-Guide)** - Dynamic planning system
+- **[Machine Learning](ML-Guide)** - Adaptive AI with learning
 - **[Blackboard System](Blackboard)** - Shared memory for AI
 - **[Brain Controller](Brain-Controller)** - Managing entity AI
 - **[Behavior Context](Behavior-Context)** - Execution context
@@ -33,6 +35,13 @@ Welcome to the **VoidAPI** documentation! This is a powerful, modular AI framewo
 - **[Scorers](Scorers)** - Evaluating behaviors
 - **[Considerations](Considerations)** - Single-variable evaluation
 - **[Response Curves](Response-Curves)** - Shaping utility scores
+
+### Machine Learning
+- **[ML Overview](ML-Guide)** - Adaptive AI fundamentals
+- **[Behavior Learning](Behavior-Learning)** - Learn from interactions
+- **[Pattern Recognition](Pattern-Recognition)** - Predict player behavior
+- **[Adaptive Difficulty](Adaptive-Difficulty)** - Dynamic challenge adjustment
+- **[Training Mode](Training-Mode)** - Supervised learning
 
 ### Examples & Tutorials
 - **[Basic Examples](Basic-Examples)** - Simple AI patterns
@@ -62,23 +71,25 @@ Welcome to the **VoidAPI** documentation! This is a powerful, modular AI framewo
 
 ## 📊 Current Version
 
-**v0.4.0** - Goal-Oriented Action Planning Complete
+**v0.5.1** - Machine Learning Integration Complete
 
 ### What's Included
 - ✅ Complete Behavior Tree system
 - ✅ 11 behavior tree nodes (basic + advanced)
 - ✅ 9 FSM components (core + hierarchical + persistence)
 - ✅ 8 GOAP components (planning + execution + integration)
+- ✅ 5 Machine Learning components (learning + patterns + difficulty)
 - ✅ 4 perception sensors
 - ✅ Full Utility AI system
 - ✅ 13+ response curves
 - ✅ Comprehensive examples
 
 ### Quick Stats
-- 📦 58 Java classes
+- 📦 63 Java classes
 - 🎯 11 behavior tree nodes
 - 🔄 9 FSM components
 - 🎯 8 GOAP components
+- 🧠 5 ML components
 - 👁️ 6 perception classes
 - 🧮 13+ response curves
 - 📚 Complete documentation
